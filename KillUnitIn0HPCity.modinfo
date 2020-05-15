@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:noNamespaceSchemaLocation="../Civ6schema/xml/ModInfo.xsd"
+        id="0bd565c6-1771-4f82-82e8-ee451a1e5151" version="1">
+  <Properties>
+    <Name>Kill Units in 0 HP City</Name>
+    <Description>This is a brief description of the mod.</Description>
+    <Created>1589572065</Created>
+    <Teaser>This is a brief description of the mod.</Teaser>
+    <Authors>gqqnbig</Authors>
+    <AffectsSavedGames>0</AffectsSavedGames>
+    <CompatibleVersions>2.0</CompatibleVersions>
+  </Properties>
+  <InGameActions>
+    <AddUserInterfaces>
+      <Properties>
+        <Context>InGame</Context>
+      </Properties>
+      <File>Script.xml</File>
+    </AddUserInterfaces>
+    <AddGameplayScripts>
+      <File>UnitHelper.lua</File>
+    </AddGameplayScripts>
+  </InGameActions>
+  <Files>
+    <File>Script.xml</File>
+    <File>Script.lua</File>
+    <File>UnitHelper.lua</File>
+  </Files>
+</Mod>
