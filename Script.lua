@@ -19,6 +19,12 @@ function OnDistrictDamageChanged(playerID, districtID, damageType, newDamage, ol
 	print(hitToUnitPercent .. ' to the unit')
 	local damage = newDamage - oldDamage
 	local damageToUnit = hitToUnitPercent * damage
+
+	-- If the city has 0 HP, make at least 50 damage to the unit inside.
+	if damageToUnit < 50 and district:GetDamage(DefenseTypes.DISTRICT_GARRISON) == district:GetMaxDamage(DefenseTypes.DISTRICT_GARRISON) then
+		damageToUnit = 50
+	end
+
 	if damageToUnit > 1 then
 		ExposedMembers.gqqnbig.KillUnitIn0HPCity.UnitsChangeDamage(playerID, district:GetX(), district:GetY(), damageToUnit)
 	end
